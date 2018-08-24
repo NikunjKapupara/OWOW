@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#407c88</color>
+    <color name="colorPrimaryDark">#3b6787</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="login_bg">#e6e6e6</color>
+
+
+    <!--PRIMARY BUTTON COLOR STATE-->
+    <color name="button_blue_positive">#3b6787</color>
+    <color name="button_blue_pressed">#407c88</color>
+
+    <!--SECONDARY BUTTON COLOR STATE-->
+    <color name="button_white_positive">#ffffff</color>
+    <color name="button_white_pressed">#e0dbdb</color>
+
+    <color name="field_header_name"> #999999</color>
+    <color name="header_text_color">#999999</color>
+</resources>

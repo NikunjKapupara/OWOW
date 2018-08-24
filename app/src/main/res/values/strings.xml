@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OWOW</string>
+    <string name="enterEmail">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="loader_message">Please wait...</string>
+    <string name="welcome_guest">Welcome Guest, Please login with your Username and Password.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_auth_failed_msg">These credentials do not match our records.</string>
+    <string name="not_available">-NA-</string>
+    <string name="no_more_data">No data to load...</string>
+    <string name="location"><b>Location: </b></string>
+
+    <!--Screen title-->
+    <string name="screen_title_login">LOGIN</string>
+    <string name="screen_title_home">HOME</string>
+
+    <!--Validation-->
+    <string name="nointernet">Please check your internet connection and try again...</string>
+    <string name="error_enter_email_address">Please enter your Email address.</string>
+    <string name="error_invaid_email_format">Please enter your valid Email address.</string>
+    <string name="error_enter_password">Please enter your Password.</string>
+    <string name="logout_confirmation">Are you sure to Logout...?</string>
+</resources>
+

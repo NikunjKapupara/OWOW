@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/actionbarTB"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:minHeight="?attr/actionBarSize"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/logoutBTN"
+            android:layout_width="28dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="28dp"
+            android:background="@drawable/ic_logout"
+            android:visibility="visible">
+        </Button>
+
+        <TextView
+            android:id="@+id/toolbarTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="LOGIN"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <!--<Button
+            android:id="@+id/btnNavIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/general_app_margin"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/menu" />-->
+
+        <!--<Button
+            android:id="@+id/ivHappeniesHome"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/general_app_margin"
+            android:background="@drawable/ic_logout" />-->
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>
