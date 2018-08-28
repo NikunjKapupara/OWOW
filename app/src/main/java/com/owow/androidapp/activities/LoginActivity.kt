@@ -20,6 +20,8 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.toolbar_homescreen.*
+import org.json.JSONObject
+import retrofit2.HttpException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -105,9 +107,22 @@ class LoginActivity : AppCompatActivity() {
                             LogUtils.getInstance().logError("SUCCESS: ", "result found")
                             navigateToHome(result)
                         },
-                        { error ->  LogUtils.getInstance().logError("ERROR: ", error.message)
+                        { error ->
                             LoaderDialog.getInstance().hideLoader()
-                            DialogUtils.showAlertDialogOnly(this, getString(R.string.login_auth_failed_msg))
+                            var message = "An error occurred"
+                            if (error is HttpException){
+                                // Kotlin will smart cast at this point
+                                val errorJsonString = error.response().errorBody()?.string()
+                                val errorObj = JSONObject(errorJsonString)
+                                val errorMsg = errorObj.getJSONObject("errors").get("login")
+                                message = errorMsg.toString()
+                                LogUtils.getInstance().logError("ERROR: ", message)
+
+                            }else {
+                                message = error.message ?: message
+                            }
+                            //DialogUtils.showAlertDialogOnly(this, getString(R.string.login_auth_failed_msg))
+                            DialogUtils.showAlertDialogOnly(this, message)
                         }
                 )
 
