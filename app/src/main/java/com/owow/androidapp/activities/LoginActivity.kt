@@ -85,7 +85,6 @@ class LoginActivity : AppCompatActivity() {
         return true
     }
 
-
     /**
      * Do User Login Operation via WEb service API call
      */
