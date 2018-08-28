@@ -98,7 +98,6 @@ class LoginActivity : AppCompatActivity() {
         /*loginJsonObj.addProperty("email", "ioscase")
         loginJsonObj.addProperty("password", "iOSCase")*/
 
-
         disposable = RetrofitAPI.userLogin(loginJsonObj)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
